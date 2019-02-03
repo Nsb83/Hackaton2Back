@@ -1,0 +1,8 @@
+GET http://localhost:8080/phone/findAll
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-12-20T042907.200.json
+
+###
+
