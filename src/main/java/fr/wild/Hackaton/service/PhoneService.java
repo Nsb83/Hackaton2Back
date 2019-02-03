@@ -23,13 +23,8 @@ public class PhoneService {
     }
 
     public Phone postPhone(Phone phone){
-//        Phone _phone = phoneDAO.save(new Phone(
-//                phone.getBrand(),
-//                phone.getModel(),
-//                phone.getPhoneNote(),
-//                phone.getPhoneScore()
-//        ));
         return phoneDAO.save(phone);
     }
+
 
 }

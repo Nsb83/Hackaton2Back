@@ -8,10 +8,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin(origins = {"http://localhost:4200"})
-@RequestMapping("phone")
+@RequestMapping("/phone")
 
 public class phoneController {
     @Autowired
@@ -30,10 +31,10 @@ public class phoneController {
         return phone;
     }
 
-//    @GetMapping(path = "/findbyNote", produces = {MediaType.APPLICATION_JSON_VALUE})
-//    public List<Phone> findAll(@PathVariable("id") long id){
-//        return phoneService.findAll(id);
-//    }
+    @GetMapping(path = "/findById/{id}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public Optional<Phone> findById(@PathVariable("id") long id){
+        return phoneService.findById(id);
+    }
 
 
 }
